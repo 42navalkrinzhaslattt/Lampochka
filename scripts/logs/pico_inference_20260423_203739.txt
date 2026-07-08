@@ -1,0 +1,6 @@
+=== Pico 2W Serial Log (4 Sensors) ===
+Port: /dev/cu.usbmodem14401
+Baudrate: 115200
+Started: 2026-04-23 20:37:39
+==================================================
+
