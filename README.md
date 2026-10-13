@@ -1,6 +1,8 @@
 # Lampochka
 
-Embedded mmWave radar experiments for detecting humans, vehicles, and rule-based targets with HLK-LD2412 sensors. The repository combines Arduino/Pico sketches, a reusable LD2412 toolkit library, Python training/export scripts, captured logs, and notebook experiments.
+Embedded mmWave radar experiments for detecting humans, vehicles and rule-based targets with HLK-LD2412 sensors: raw gate energies are calibrated against the empty scene, turned into a 30-value feature vector and classified on the microcontroller itself. The repository combines Arduino/Pico sketches, a reusable LD2412 toolkit library, Python training/export scripts, captured logs and notebook experiments.
+
+**Stack:** C++ (Arduino, RP2040 / Pico 2W) · Python · scikit-learn · FastAPI    **Context:** Lampochka, hardware startup I co-founded (2024–2025)
 
 ## What this project does
 
@@ -238,6 +240,6 @@ sketches/rf_pico2w/RandomForest.h
 
 ## Project notes
 
-- `logs/` and `models/` are part of the experiment history and are useful for retraining and analysis.
+- `logs/` and `models/` are part of the experiment history and are useful for retraining and analysis. The logs (plain-text serial captures plus plots in `logs/06/plots`) make up almost all of the repository's size (about 65 MB checked out; the largest, `logs/pico_4s_mixed.txt`, is 6.9 MB).
 - `.venv/`, `.DS_Store`, Python caches, notebook checkpoints, and local editor files are intentionally ignored by Git.
 - The project is optimized for fast embedded iteration; review calibration durations, thresholds, and pin maps before deployment.
